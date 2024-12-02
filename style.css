@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #e3f7fe;
+}
+
+.logo {
+    font-size: 50px;
+    animation: circle 9s linear infinite;
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#009dfe66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .loader {
+    font-size: 100px; /* Adjust size as needed */
+    color: #009dfe; /* Match the color of the icon */
+    animation: spin 2s linear infinite; /* Spin animation */
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+    border: 0.5px solid #009DFE;
+    margin: 20px auto;
+    width: 50%;
+    border-radius: 100px;
+}
+
+.navlists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.navlists a {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #009DFE;
+    font-weight: 800;
+}
+
+.navlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.navlist li a {
+    color: #009DFE;
+    font-weight: bolder;
+}
+
+.underline li a:hover {
+    border-bottom: 5px solid black;
+}
+
+a {
+    text-decoration: none;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 130px;
+}
+
+.box1 {
+    width: 50%;
+    padding: 20px;
+}
+
+.box2 {
+    width: 50%;
+    position: relative;
+    /* Needed for absolute positioning of the overlay */
+}
+
+.box2 img {
+    width: 70%;
+    border-radius: 50px;
+    position: relative;
+    /* Ensure that the image is the reference point for overlay */
+}
+
+.image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #009DFE;
+    mix-blend-mode: color;
+    opacity: 0.4;
+    /* Set the default opacity to 0 for hidden effect */
+    transition: opacity 0.3s ease;
+}
+
+
+
+.heading-text a {
+    color: #009DFE;
+    font-weight: 900;
+}
+
+.heading-text a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    /* Add an underline on hover */
+}
+
+.fa-bars {
+    display: none;
+}
+
+
+@media screen and (max-width:768px) {
+
+    /* body{
+        outline: 1px solid red;
+    } */
+    .navigation {
+        width: 90%;
+        border-radius: 0;
+        margin-top: 0;
+    }
+
+    .navlist {
+        position: absolute;
+        background-color: white;
+        flex-direction: block;
+        top: 10%;
+        left: 0;
+        right: 0;
+        align-items: start;
+        padding: 10px;
+        gap: 10px;
+        display: none;
+    }
+
+
+    .fa-bars {
+        display: block;
+    }
+
+    .container {
+        /* background-color: red; */
+        width: 100%;
+        flex-direction: column-reverse;
+        /* display: none; */
+        /* padding: 10px; */
+    }
+
+    .box1 {
+        width: 95%;
+    }
+
+    .box2 {
+        width: 100%;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .navigation {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    .navlist {
+        flex-direction: row;
+        display: flex;
+        position: relative;
+        background-color: transparent;
+        padding: 0;
+        gap: 15px;
+    }
+
+    .container {
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .box1, .box2 {
+        width: 45%;
+    }
+
+    .image-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 320px){
+
+    .weekend{
+        display: none;
+    }
+}

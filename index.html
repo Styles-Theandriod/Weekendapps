@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./famousAndroid.jpeg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="loading">
+      <i class="fa fa-certificate loader"></i> <!-- Using Font Awesome icon -->
+    </div>
+    <div class="navigation">
+      <ul class="navlists">
+        <li class="logo">
+          <i class="fa fa-certificate" style="color: #009dfe"></i>
+        </li>
+        <li><a href="" class="weekend">weekend apps</a></li>
+      </ul>
+
+      <ul class="navlist underline">
+        <li><a href="">Writting</a></li>
+        <li><a href="">Tweeting </a></li>
+        <li><a href="">Building</a></li>
+      </ul>
+      <i class="fa fa-bars" style="font-size: 30px; color: #009dfe;"></i>
+    </div>
+
+    <div class="container">
+      <div class="box1">
+        <div class="heading-text">
+          <h1>Hi! 👋</h1>
+          <p>
+            My name's
+            <a
+              href="http://www.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >famous Android.</a
+            >
+          </p>
+          <br />
+          <br />
+          <p>
+            I'm the Founder of
+            <a
+              href="http://tutgotechnologies.com.ng"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="tutgo"
+              >tutgo technologies</a
+            >
+            where i teach every weekends
+            <br />
+            <br />
+            I am also building
+            <a href="http://" target="_blank" rel="noopener noreferrer"
+              >weekend apps.
+            </a>
+            where i build habit forming products.
+          </p>
+        </div>
+      </div>
+      <div class="box2">
+        <div class="image-container">
+          <img src="./famousAndroid.jpeg" alt="" />
+          <i
+            class="fa fa-certificate certificate"
+            style="
+              color: #009dfe;
+              position: absolute;
+              bottom: 0;
+              font-size: 50px;
+              right: 29%;
+            "
+          ></i>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let bars = document.querySelector('.fa-bars')
+      let list = document.querySelector('.navlist')
+      bars.addEventListener('click', function(){
+        list.style.display = (list.style.display === 'flex') ? 'none' : 'flex';
+      })
+
+      window.onload = function() {
+        document.getElementById('loading').style.display = 'none';
+      };
+    </script>
+  </body>
+</html>
